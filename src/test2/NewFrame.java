@@ -1,6 +1,9 @@
 package test2;
 
 import java.time.LocalDate;
+
+import java.time.LocalDateTime;
+
 import java.util.Date;
 
 public class NewFrame {
@@ -53,6 +56,8 @@ public class NewFrame {
 		System.out.println(now.getDayOfMonth());
 		System.out.println(now.getDayOfYear());
 		
+		LocalDateTime localDateTime = LocalDateTime.now();
+		
 		//Primitives VS Reference Types:
 		
 		//Primitives
@@ -73,6 +78,24 @@ public class NewFrame {
 		
 		System.out.println("After changing alex");
 		System.out.println(alex.name + " " + mariam.name);
+		
+		
+		//Class, object
+		String name1 = new String("Johnny"); // Class = String and object = name1
+		System.out.println(name1);
+		System.out.println(name1.toUpperCase()); //method = toUpperCase  -- a method is a behavior
+		System.out.println(name1.charAt(0));
+		System.out.println(name1.charAt(1));
+		System.out.println(name1.charAt(5));
+		System.out.println(name1.contains(name1));
+		System.out.println(name1.contains(name));
+		
+		
+		
+		String name2 = "Jona";//[String name1 = "Johnny"] and [String name1 = new String("Johnny")]   are the same
+		String code = "codes";
+		System.out.println(name2.contains(name1));
+		System.out.println(name2.contains(name2));
 	}
 	
 	
