@@ -3,7 +3,7 @@ package test2;
 import java.time.LocalDate;
 
 import java.time.LocalDateTime;
-
+import java.util.Arrays;
 import java.util.Date;
 
 
@@ -29,7 +29,7 @@ public class NewFrame {
 		int theInt = 297_824_676;// int whole numbers from -2147483648 to 2147483647
 		long theLong = 9_874_983_945_785_745L; // long stores whole # from -128 to 127
 		float theFloat = 891.8_574_584F; // float stores 6 to 7 decimal
-		double theDouble = 38.38475736; // double stores 15 decimals
+		double theDouble = 38.38475736984673; // double stores 15 decimals
 		boolean isAdult = true;
 		char nameInitial = 'A';
 		
@@ -56,6 +56,9 @@ public class NewFrame {
 		System.out.println(now.getMonth());
 		System.out.println(now.getDayOfMonth());
 		System.out.println(now.getDayOfYear());
+		System.out.println(now.isLeapYear());
+		System.out.println(now.atTime(03, 23, 10));
+		System.out.println(now.now());
 		
 		LocalDateTime localDateTime = LocalDateTime.now();
 		
@@ -69,7 +72,7 @@ public class NewFrame {
 
 		
 		//References
-		Person alex = new Person("alex");
+		/*Person alex = new Person("alex");
 		Person mariam = alex;
 		
 		System.out.println("Before changing alex");
@@ -78,7 +81,7 @@ public class NewFrame {
 		alex.name = "Alexander";
 		
 		System.out.println("After changing alex");
-		System.out.println(alex.name + " " + mariam.name);
+		System.out.println(alex.name + " " + mariam.name);*/
 		
 		
 		//Class, object
@@ -189,18 +192,137 @@ public class NewFrame {
 				+ "generates bytecode.");
 		System.out.print("This intermediate bytecode is saved in form of a .class file.");
 		
+		System.out.println("Break");
 		
 		//---------------------------------------------------------------------------------------------------------------
 		
 		/* multi line comment*/
 		
 		// One line comment
+		//if statement
 		
+		//Moba is 17. Can he be allowed entry in the club or not?
+		
+		//exo1
+		int age = 16;
+		if (age>=18) {
+			 System.out.println("Adult");
+		} 
+		if (age<18) {
+			System.out.println("No entry.");
+		}
+		
+		
+		
+		//exo2
+		int age1 = 17;
+		if (age1>=18) {
+			 System.out.println("Adult");
+		} else {
+			System.out.println("Not allowed entry.");
+		}
+		
+		//exo3
+		/*VIP club allows entry from age 16 but no alcohol drinking from age 16 to 20, can only drink from age 21 and up.
+		who can drink?*/
+		
+		int age2 = 20;
+		if (age2>=21) {
+			System.out.println("You can enter the club and be served alcohol drinks.");
+		} else if (age2 >=16 && age2<=20) {
+			System.out.println("Can enter the VIP club but cant drink alcohol.");
+		} else {
+			System.out.println("Not allowed in.");
+		}
+		
+		//exo4
+		
+		int age3 = 15;
+		if (age3>=21) {
+			System.out.println("You can enter the club and be served alcohol drinks.");
+		} else if (age3 >=16 && age3<=20) {
+			System.out.println("Can enter the VIP club but cant drink alcohol.");
+		} else {
+			System.out.println("Not allowed in.");
+		}
+		
+		
+		//exo5
+		int age4 = 26;
+		if (age4>=21) {
+			System.out.println("You can enter the club and be served alcohol drinks.");
+		} else if (age4 >=16 && age4<=20) {
+			System.out.println("Can enter the VIP club but cant drink alcohol.");
+		} else {
+			System.out.println("Not allowed in.");
+		
+			
+			
+		//ternary operators <-- Just for knowledge, don't need to use it much
+			
+		int age5 = 29;
+		String message = age5>=18 ? 
+				"You can enter the club and be served alcohol drinks.":
+					"Not allowed in.";
+		System.out.println(message);
+				
+		//---------------------------------------------------------------------------------------------------------------	
+		
+		//SWITCH statement <-- Another we can't use with operators and stuff
+		String gender = "female";
+		if (gender == "female"){
+			System.out.println("Scream Pink.");
+		} else if (gender == "male") {
+			System.out.println("Scream blue.");
+		} else if (gender.equals("Prefer not to say.")){
+			System.out.println("We won't say it. Booooo...");
+		}
+		
+		switch (gender){
+			case "female":
+				System.out.println("Scream Pink.");
+				break;
+			case "male":
+				System.out.println("Scream blue.");
+				break;
+			case "Prefer not to say":
+				System.out.println("We won't say it. Booooo...");
+				break;
+			default: 
+				System.out.println("No worries");
+		}
+		System.out.println("Hi");
+		
+		
+		
+		
+		
+		
+		//---------------------------------------------------------------------------------------------------------------	
+		//Arrays
+		int zero = 0;
+		int one = 1;
+		int [] numbers = new int[3];
+		System.out.println(Arrays.toString(numbers));
+		
+		
+		
+		
+		
+		
+		
+		//---------------------------------------------------------------------------------------------------------------	
+		
+		
+		
+		
+		
+		
+		
+		//---------------------------------------------------------------------------------------------------------------	
 		
 		
 	}
-	//---------------------------------------------------------------------------------------------------------------	
-		
 		
 				
 	
@@ -208,13 +330,13 @@ public class NewFrame {
 	
 	
 	
-	
+	/*
 	static class Person {
 		String name;
 		
 		Person(String name){
 			this.name = name;
-		}
+		}*/
 	}
 
 }
