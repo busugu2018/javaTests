@@ -26,8 +26,8 @@ public class NewFrame {
 		
 		byte theByte = -128; // byte stores whole # from -128 to 127
 		short theShort = 9_379; // short whole numbers from -32768 to 32767
-		int theInt = 297_824_676;// int whole numbers from -2147483648 to 2147483647
-		long theLong = 9_874_983_945_785_745L; // long stores whole # from -128 to 127
+		int theInt = 297_824_676;// int whole numbers from -2_147_483_648 to 2_147_483_647
+		long theLong = 9_874_983_945_785_745L; // long stores whole # from -2^63 or (-9_223_372_036_854_775_808) to 2^63 or 9,223,372,036,854,775,807
 		float theFloat = 891.8_574_584F; // float stores 6 to 7 decimal
 		double theDouble = 38.38475736984673; // double stores 15 decimals
 		boolean isAdult = true;
@@ -125,6 +125,9 @@ public class NewFrame {
 		System.out.println(Math.acos(90));
 		System.out.println(Math.max(92834.938475629485637, 923.93847563));
 		System.out.println(Math.multiplyFull(theByte, -theByte));
+		
+		int degree = 45;
+		System.out.println(Math.cos(degree));
 		//---------------------------------------------------------------------------------------------------------------	
 		//comparison operations
 		int miaAge = 2;
